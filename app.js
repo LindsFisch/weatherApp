@@ -24,20 +24,25 @@ $(document).ready(function() {
     var humidity = response.main.humidity;
     var condition = response.weather[0].main;
     var iconCode = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+    var code = response.weather[0].code;
 
     console.log(city, temperature, humidity, condition, iconCode)
     
-//     switch (condition) {
-//       case "clear":
+//     switch (code) {
+          //storm
+//       case "11d":
 //         $(body).css("background-image", "url(https://report.az/storage/news/b6561e5fd06e28947a3fbb2c8e6a221e/731c8a5a-fe4e-449d-bcef-337dcdb7791e.jpg)")
 //         break;
+          //rain
 //       case "rain":
 //         $(body).css("background-image", "url(http)
         
 //         break;
+          //clear
 //       case "snow":
         
 //         break;
+          //cloudy
 //       case "clouds":
         
 //         break;    
@@ -49,8 +54,8 @@ $(document).ready(function() {
     $("#city").text(city);
     $("#condition").text(condition);
     $("#statusIcon").attr("src", iconCode);
-    $("#temp").text(temperature);
-    $("#humidity").text(humidity);
+    $("#temp").text(temperature +'\u00B0');
+    $("#humidity").text(humidity + '\u0025');
   });
         
 }
