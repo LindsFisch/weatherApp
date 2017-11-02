@@ -20,7 +20,7 @@ $(document).ready(function () {
       method: "GET"
     }).done(function (response) {
       var city = response.name;
-      var temperature = response.main.temp;
+      var temperature = Math.floor(response.main.temp);
       var humidity = response.main.humidity;
       var condition = response.weather[0].main;
       var iconCode = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";

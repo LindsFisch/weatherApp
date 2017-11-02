@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
 	 crossorigin="anonymous">
-	 <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="app.js"></script>
 </head>
 
@@ -15,14 +15,16 @@
 	<header>
 		<h1>Weather App</h1>
 	</header>
-	<section id="weather">
-		<div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
-			<div class="card-header" id="city">Location</div>
-			<div class="card-body">
-				<h4 class="card-title" id="condition">Weather</h4>
-				<img src="images/temp.png" alt="weather icon" id="statusIcon" height="50" width="50">
-				<p class="card-text" id="temp">Temperature</p>
-				<p class="card-text" id="humidity">Humidity</p>
+	<section>
+		<div class="container">
+			<div id="weather" class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+				<div class="card-header text-center" id="city">Location</div>
+				<div class="card-body">
+					<h4 class="card-title text-center" id="condition">Weather</h4>
+					<div class="text-center"><img src="images/temp.png" alt="weather icon" id="statusIcon" height="50" width="50"></div>
+					<p class="card-text text-center" id="temp">Temperature</p>
+					<p class="card-text text-center" id="humidity">Humidity</p>
+				</div>
 			</div>
 		</div>
 	</section>
