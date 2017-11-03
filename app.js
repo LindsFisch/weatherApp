@@ -7,7 +7,7 @@ $(document).ready(function () {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
 
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&units=imperial&APPID=198bc91b6896cf84288eeee42bc1d336";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&units=imperial&APPID=198bc91b6896cf84288eeee42bc1d336";
         console.log(queryURL);
         getWeather(queryURL);
       });
@@ -25,7 +25,7 @@ $(document).ready(function () {
       temperature = Math.round(response.main.temp);
       var humidity = response.main.humidity;
       var condition = response.weather[0].main;
-      var iconCode = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+      var iconCode = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
       var code = response.weather[0].icon;
 
       // console.log(city, temperature, humidity, condition, iconCode, code)
