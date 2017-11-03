@@ -1,6 +1,8 @@
 $(document).ready(function () {
   //  "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=198bc91b6896cf84288eeee42bc1d336"
 
+  var temperature;
+
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
@@ -20,7 +22,7 @@ $(document).ready(function () {
       method: "GET"
     }).done(function (response) {
       var city = response.name;
-      var temperature = Math.floor(response.main.temp);
+      temperature = Math.round(response.main.temp);
       var humidity = response.main.humidity;
       var condition = response.weather[0].main;
       var iconCode = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
@@ -69,8 +71,19 @@ $(document).ready(function () {
 
   }
 
-  // function changeUnit(temperature) {
+  $('#tog-btn').click(function(){
+    var currentUnit = $("#degreeUnit").text();
 
-  // }
+    if (currentUnit === 'F') {
+      temperature = Math.round((temperature - 32) * (5/9));
+      $("#temp").text(temperature + '\u00B0');
+      $("#degreeUnit").text("C");
+    } else {
+      temperature = Math.round((temperature * 1.8) + 32);
+      $("#temp").text(temperature + '\u00B0');
+      $("#degreeUnit").text("F");
+
+    }
+  })
   getLocation();
 });

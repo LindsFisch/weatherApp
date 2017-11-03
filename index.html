@@ -13,19 +13,22 @@
 
 <body>
 	<header>
-		<h1>Weather App</h1>
+		<div class="container headTitle">
+			<h1 class="text-center">Weather in your area</h1>
+		</div>
 	</header>
 	<section>
 		<div class="container">
 			<div id="weather" class="card text-white bg-dark mb-3" style="max-width: 20rem;">
-				<div class="card-header text-center" id="city">Location</div>
+				<h2 class="card-header text-center" id="city">Location</h2>
 				<div class="card-body">
 					<h4 class="card-title text-center" id="condition">Weather</h4>
 					<div class="text-center"><img src="images/temp.png" alt="weather icon" id="statusIcon" height="50" width="50"></div>
-					<p class="card-text text-center" id="temp">Temperature</p>
-					<p class="card-text text-center" id="humidity">Humidity</p>
+					<h4 class="card-text text-center"><span id="temp">Temperature&deg</span><span id="degreeUnit">F</span></h4>
+					<h4 class="card-text text-center"><span id="humidity">Humidity</span><span> Humidity</span></h4>
 				</div>
 			</div>
+			<div class="container text-center"><button type="button" class="btn btn-primary" id="tog-btn">Change Units</button></div>
 		</div>
 	</section>
 </body>

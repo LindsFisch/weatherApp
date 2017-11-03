@@ -1,8 +1,20 @@
 body {
     background-color: black;
+    background-size: cover;
 }
 
 #weather {
     width: 40%;
     margin: auto;
+    height: 40%;
+}
+
+#tog-btn {
+    width: 20%;
+    margin: auto;
+}
+
+.headTitle{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
