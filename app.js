@@ -28,7 +28,7 @@ $(document).ready(function () {
       var iconCode = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
       var code = response.weather[0].icon;
 
-      console.log(city, temperature, humidity, condition, iconCode, code)
+      // console.log(city, temperature, humidity, condition, iconCode, code)
 
           switch (code) {
             case '11d':
